@@ -39,5 +39,5 @@ int leitura(void){
   }
 return dir;
 
-}
+
   
