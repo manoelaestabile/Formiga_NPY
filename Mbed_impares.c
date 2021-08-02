@@ -65,7 +65,7 @@ void loop() {
 // 
 // Buscar pela Comunicação CAN
 //
-  if
+  if (1)
     // Para frente
     if (dir == 2) {
       moveLeg1();
