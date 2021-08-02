@@ -74,8 +74,6 @@ void loop() {
     // Para frente
     if (dir == 2) {
       moveLeg1();
-      moveLeg3();
-      moveLeg5();
       if (P1_SINC == HIGH) {
         moveLeg2();
         moveLeg4();
@@ -85,8 +83,6 @@ void loop() {
     // Girar para esquerda
     if (dir == 3) {
       moveLeg1();
-      moveLeg3();
-      moveLeg5Left();
       if (P1_SINC == HIGH) {
         moveLeg2();
         moveLeg4Left();
@@ -96,8 +92,6 @@ void loop() {
     // Girar para direita
     if (dir == 4) {
       moveLeg1Right();
-      moveLeg3Right();
-      moveLeg5();
       if (P1_SINC == HIGH) {
         moveLeg2Right();
         moveLeg4();
@@ -107,8 +101,6 @@ void loop() {
     // Para tras
     if (dir == 5) {
       moveLeg1Rev();
-      moveLeg3Rev();
-      moveLeg5Rev();
       if (P1_SINC == HIGH) {
         moveLeg2Rev();
         moveLeg4Rev();
