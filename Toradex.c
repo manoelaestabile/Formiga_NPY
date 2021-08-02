@@ -38,5 +38,5 @@ int leitura(void){
   dir = 5; //tras
   }
 return dir;
-}
+
   
