@@ -12,32 +12,33 @@
 #include <linux/can.h>
 #include <linux/can/raw.h>
 
-void main(){
+int main(){
   int dir=0;
-  char c;
   while(1){
     dir = leitura();
   
     // Enviar dir via CAN
-    delay(3000)
+    delay(3000);
   }
 }
 
 int leitura(void){
-  scanf("%c", $c);
-  if(c == "w"){
-  dir = 2; //frente
+char ca;
+int a; 
+  scanf("%c", &ca);
+  if(ca == "w"){
+  a = 2; //frente
   }
-  else if(c == "a"){
-  dir = 3; //esquerda
+  else if(ca == "a"){
+  a = 3; //esquerda
   }
-  else if(c == "d"){
-  dir = 4; //direita
+  else if(ca == "d"){
+  a = 4; //direita
   }
-  else if(c == "s"){
-  dir = 5; //tras
+  else if(ca == "s"){
+  a = 5; //tras
   }
-return dir;
+return a;
 
 }
   
