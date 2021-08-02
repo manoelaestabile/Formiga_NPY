@@ -5,7 +5,7 @@ Projeto de formiga robótica para disciplina Sistemas Embarcados (EESC-USP).Alun
 O projeto da Formiga Robótica tem como objetivo implementar uma lógica de movimentos do robô proposto a partir do uso de sistemas embarcados. Para isso, foi desenvolvido o código para descrever a caminhada da formiga, além da comunicação entre toradex e Mbed pelo protocolo CAN.
 
 ## Desenvolvimento
-A formiga robótica possui 2 servos motores em cada uma de suas 6 patas. Para implementar a lógica da caminhada da formiga robótica, elaboramos um diagrama geral da rotina do robô. Com as pernas enumeradas de 1 a 6, foram definidas os possíveis comandos (frente, trás, direita e esquerda) e sua respectiva sequência de movimentos. Além disso, como o movimento é incremental, caso queira interromper algum movimento, o programa permite que as pernas da formiga voltem ao solo para repouso. O diagrama encontra-se logo abaixo.
+A formiga robótica possui 2 servos motores em cada uma de suas 6 patas. Para implementar a lógica da caminhada da formiga robótica, elaboramos um diagrama geral da rotina do robô. Com as pernas enumeradas de 1 a 6, foram definidas os possíveis comandos (frente, trás, direita e esquerda) e sua respectiva sequência de movimentos. Além disso, como o movimento é incremental; por isso, caso queira interromper algum movimento, o programa permite que as pernas da formiga voltem ao solo para repouso. O diagrama encontra-se logo abaixo.
 
 ![image](https://user-images.githubusercontent.com/82612592/127589260-1ed236b8-fc52-4524-ab71-36cfe67e2d29.png)
 
