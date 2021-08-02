@@ -7,7 +7,7 @@ O projeto da Formiga Robótica tem como objetivo implementar uma lógica de movi
 ## Desenvolvimento
 A formiga robótica possui 2 servos motores em cada uma de suas 6 patas. Para implementar a lógica da caminhada da formiga robótica, elaboramos um diagrama geral da rotina do robô. Com as pernas enumeradas de 1 a 6, foram definidas os possíveis comandos (frente, trás, direita e esquerda) e sua respectiva sequência de movimentos. Além disso, como o movimento é incremental; por isso, caso queira interromper algum movimento, o programa permite que as pernas da formiga voltem ao solo para repouso. O diagrama encontra-se logo abaixo.
 
-![image](https://user-images.githubusercontent.com/82612592/127589260-1ed236b8-fc52-4524-ab71-36cfe67e2d29.png)
+![image](https://github.com/manoelaestabile/embarcados_formiga/blob/main/Diagrama%20de%20blocos%20-%20formiga.png?raw=true)
 
 Como cada placa toradex suporta até 6 conexões e a formiga robótica é composta por 12 servos motores, foram utilizamos 2 Mbeds, na qual uma faz o controle dos 6 motores presentes das pernas ímpares e a outra faz o controle dos motores presentes das pernas pares. O grupo optou por desenvolver as instruções nas próprias Mbeds. Assim, a toradex tem apenas o papel de ler o comando vindo do computador e comunicar para a Mbed correspondente por meio do protocolo CAN.
 
