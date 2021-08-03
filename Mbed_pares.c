@@ -1,6 +1,6 @@
 #include "mbed.h"
 #include "math.h"
-#include "Servo.h"
+
 
 // Criacao dos servos
 
