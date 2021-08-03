@@ -1,12 +1,12 @@
 # Embarcados - Formiga Robótica
-Escola de Engenharia de São Carlos - Universidade São Paulo
-Projeto de formiga robótica para disciplina Sistemas Embarcados (EESC-USP).
+Escola de Engenharia de São Carlos - Universidade São Paulo <br />
+Projeto de formiga robótica para disciplina Sistemas Embarcados (EESC-USP). <br />
 Professores: Glauco Caurin e Daniel Varela.
 
 Alunos: 
-Manoela Estabile Rodrigues (10308843)
-Marcela Sanae Honma (10309503)
-Victor Moreira Santos (10274008)
+Manoela Estabile Rodrigues (10308843)<br />
+Marcela Sanae Honma (10309503) <br />
+Victor Moreira Santos (10274008) <br />
 
 
 ## Introdução
