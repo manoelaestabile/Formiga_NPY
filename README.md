@@ -1,4 +1,4 @@
-# Embarcados - Formiga Robótica
+# Projeto de Formiga Robótica
 Escola de Engenharia de São Carlos - Universidade São Paulo <br />
 Projeto de formiga robótica para disciplina Sistemas Embarcados (EESC-USP). <br />
 Professores: Glauco Caurin e Daniel Varela.
@@ -40,7 +40,7 @@ O arquivo indicado por _Toradex.c_ , no repositório, refere-se ao código passa
 
 ## 2.4. Protocolo CAN (Toradex - Mbed)
 
-O protocolo CAN é uma comunicação serial amplamente utilizada em sistemas embarcados e foi nossa escolha com relação à comunicação da Toradex com as Mbeds. Através deste protocolo, as mensagens armazenadas na Toradex, recebidas do usuário, poderiam ser enviadas às Mbeds, que as transformariam em movimentos da formiga robótica. Ao longo do desenvolvimento do projeto, tivemos dificuldades com a habilitação da porta CAN na Toradex e com a própria implementação do protocolo nos códigos das placas. Sendo assim, esta parte do projeto não pôde ser testada até o momento.
+O protocolo CAN é uma comunicação serial amplamente utilizada em sistemas embarcados e foi nossa escolha com relação à comunicação entre a Toradex e as Mbeds. Através deste protocolo, as mensagens armazenadas na Toradex, recebidas do usuário, poderiam ser enviadas às Mbeds, que as transformariam em movimentos da formiga robótica. Ao longo do desenvolvimento do projeto, tivemos dificuldades com a habilitação da porta CAN na Toradex e com a própria implementação do protocolo nos códigos das placas. Sendo assim, esta parte do projeto não pôde ser testada até o momento.
 
 Os arquivos indicados por _Mbed_pares.c_ e _Mbed_ímpares.c_, no repositório, contêm os códigos utilizados para definir a rotina de movimentação do robô. Eles foram desenvolvidos na IDE da Mbed _Compiler_, que permite gerar arquivos de extensão .bin, a serem carregados nas placas.
 
