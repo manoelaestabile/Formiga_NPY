@@ -4,7 +4,7 @@ Projeto de formiga robótica para disciplina Sistemas Embarcados (EESC-USP).
 Professores: Glauco Caurin e Daniel Varela.
 
 Alunos: 
-Manoela Estabile Rodrigues (10308843) \n
+Manoela Estabile Rodrigues (10308843)
 Marcela Sanae Honma (10309503)
 Victor Moreira Santos (10274008)
 
