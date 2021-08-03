@@ -25,8 +25,8 @@ Para desenvolver o código, foi necessário definir os servos de elevação e ro
 
 O controle da formiga robótica foi feito por 
 
+![image](https://github.com/manoelaestabile/embarcados_formiga/blob/main/Fluxo%20de%20comunica%C3%A7%C3%A3o%20-%20formiga.png)
 
-![image] (https://github.com/manoelaestabile/embarcados_formiga/blob/main/Fluxo%20de%20comunica%C3%A7%C3%A3o%20-%20formiga.png)
 
 Como cada placa toradex suporta até 6 conexões e a formiga robótica é composta por 12 servos motores, foram utilizamos 2 Mbeds, na qual uma faz o controle dos 6 motores presentes das pernas ímpares e a outra faz o controle dos motores presentes das pernas pares. O grupo optou por desenvolver as instruções nas próprias Mbeds. Assim, a toradex tem apenas o papel de ler o comando vindo do computador e comunicar para a Mbed correspondente por meio do protocolo CAN.
 
