@@ -402,3 +402,4 @@ void initialPosition() {
   P2_LEV_DESCER = 0;
   P2_ROT_RECUAR = 0;
 
+}
