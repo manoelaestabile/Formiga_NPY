@@ -19,7 +19,9 @@ A formiga robótica possui 2 servos motores (um para rotação e outro para elev
 
 ![image](https://github.com/manoelaestabile/embarcados_formiga/blob/main/Diagrama%20de%20blocos%20-%20formiga.png?raw=true)
 
-Para desenvolver o código, foi necessário definir os servos de elevação e rotação de cada perna e descrever cada conjunto de ações para cada comando de movimento. Basicamente, para o comando de mover para frente, o primeiro passo é mover simulataneamente as pernas 1,3 e 5, que consiste em: elevar a perna; rotacionar; descer e continuar rotacionando até voltar ao solo; recuar para posição inicial e zerar todos os contadores. Em seguida, para continuar o comando, pode realizar a sequência das pernas 2,4 e 6 e assim sucessivamente. Já para girar para a esquerda, a sequência de movimentos para as duas primeiras pernas são iguais, porém a última perna realiza a sequência de mover para a esquerda, que consiste em: elevar a perna; rotacionar; continuar rotacionando e descer e rotacionar até a posição inicial. 
+Para desenvolver o código, foi necessário definir os servos de elevação e rotação de cada perna e descrever cada conjunto de ações para cada comando de movimento. Basicamente, para o comando de mover para frente, o primeiro passo é mover simulataneamente as pernas 1,3 e 5, que consiste em: elevar a perna; rotacionar; descer e continuar rotacionando até voltar ao solo; recuar para posição inicial e zerar todos os contadores. Em seguida, para continuar o comando, pode realizar a sequência das pernas 2,4 e 6 e assim sucessivamente. Já para girar para a esquerda, a sequência de movimentos para as duas primeiras pernas são iguais, porém a última perna realiza a sequência de mover para a esquerda, que consiste em: elevar a perna; rotacionar; continuar rotacionando e descer e rotacionar até a posição inicial. Os ângulos dos motores enquanto a formiga marcha para frente podem ser observados na imagem abaixo.
+
+![untitled](https://user-images.githubusercontent.com/88212397/127944036-dbb27514-52ff-44ce-baac-e4f7ee99fcea.jpg)
 
 ## 2.2. Componentes de controle e comunicação 
 
