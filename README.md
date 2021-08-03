@@ -25,24 +25,14 @@ Para desenvolver o código, foi necessário definir os servos de elevação e ro
 
 ## 2.2. Componentes de controle e comunicação 
 
-O controle da formiga robótica foi feito por 
+O controle central da formiga robótica foi feito por uma Toradex (Colibri Vf50) e foram utilizadas placas Mbeds (LPC1768) para o controle dos motores. Cada Mbed possui 6 canais PWM e, como são utilizados 12 servo motores no robô, foram necessárias 2 placas Mbeds: uma faz o controle dos 6 motores presentes das pernas ímpares e a outra faz o controle dos motores presentes das pernas pares. A Mbed, mais do que somente fornecer canais PWM, também tem capacidade computacional para interpretar códigos de comandos mais complexos. Sendo assim, o grupo optou por carregar a rotina de movimentação nas próprias Mbeds, deixando a Toradex com a funçõa de receber instruções do usuário e somente repassá-las adianta para as Mbeds. Isso permite que a Toradex esteja disponível para realizar outras funções, no caso de uma aplicação mais complexa que exija 
 
 ![image](https://github.com/manoelaestabile/embarcados_formiga/blob/main/Fluxo%20de%20comunica%C3%A7%C3%A3o%20-%20formiga.png)
 
 
-Como cada placa toradex suporta até 6 conexões e a formiga robótica é composta por 12 servos motores, foram utilizamos 2 Mbeds, na qual uma faz o controle dos 6 motores presentes das pernas ímpares e a outra faz o controle dos motores presentes das pernas pares. O grupo optou por desenvolver as instruções nas próprias Mbeds. Assim, a toradex tem apenas o papel de ler o comando vindo do computador e comunicar para a Mbed correspondente por meio do protocolo CAN.
 
 Para que haja comunicação entre o computador do laboratório e a toradex, é necessário seguir alguns passos, como foi realizado em aula. Primeiro, é feito a conexão remota pelo _Anydesk_. Com o _SDK (Software Development Kit)_ instalado, executamos uma série de instruções no diretório home para exportar as variáveis e então realizar o _Cross Compiling_. Para enviar ao _target_, que nesse caso é a Toradex, identificamos o seu IP e aplicamos no outro terminal o protocolo _SSH (Security Shell)_, que permite conexões criptografadas entre cliente e servidor.Assim, é possível executar o código na toradex.
 
 
 
 
-
-
-Introduçao
-Logica da caminhada da formiga (aquele diagrama esquematico que temos + logica do codigo do ph)
-Pc-toradex 
-Toradex-mbed (can)
-Funçao de cada componente (o que vai acontecer na toradex e nas mbeds - codigo do ph)
-Testes (feitos, nao feitos, deveriam ser feitos)
-Conclusão pra ficar bonito
