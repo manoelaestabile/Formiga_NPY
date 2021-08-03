@@ -25,14 +25,24 @@ Para desenvolver o código, foi necessário definir os servos de elevação e ro
 
 ## 2.2. Componentes de controle e comunicação 
 
-O controle central da formiga robótica foi feito por uma Toradex (Colibri Vf50) e foram utilizadas placas Mbeds (LPC1768) para o controle dos motores. Cada Mbed possui 6 canais PWM e, como são utilizados 12 servo motores no robô, foram necessárias 2 placas Mbeds: uma faz o controle dos 6 motores presentes das pernas ímpares e a outra faz o controle dos motores presentes das pernas pares. A Mbed, mais do que somente fornecer canais PWM, também tem capacidade computacional para interpretar códigos de comandos mais complexos. Sendo assim, o grupo optou por carregar a rotina de movimentação nas próprias Mbeds, deixando a Toradex com a funçõa de receber instruções do usuário e somente repassá-las adianta para as Mbeds. Isso permite que a Toradex esteja disponível para realizar outras funções, no caso de uma aplicação mais complexa que exija 
+O usuário tem acesso a um computador (Linux), através do qual envia os comandos, o controle central da formiga robótica é feito por uma Toradex (Colibri Vf50) e foram utilizadas placas Mbeds (LPC1768) para o controle dos motores. Cada Mbed possui 6 canais PWM e, como são utilizados 12 servo motores no robô, foram necessárias 2 placas Mbeds: uma faz o controle dos 6 motores presentes das pernas ímpares e a outra faz o controle dos motores presentes das pernas pares. A Mbed, mais do que somente fornecer canais PWM, também tem capacidade computacional para interpretar códigos de comandos mais complexos. Sendo assim, o grupo optou por carregar a rotina de movimentação nas próprias Mbeds, deixando a Toradex com a funçõa de receber instruções do usuário e somente repassá-las adianta para as Mbeds. Isso permite que a Toradex esteja disponível para realizar outras funções, no caso de uma aplicação com maior demanda. 
+
+A comunicação entre os componentes ocorre conforme a ilustração abaixo. O computador do usuário se comunica com a Toradex através do protocolo SSH. A Toradex, por sua vez, repassa a mensagem do usuário para Mbed utilizando a comunicação CAN.
 
 ![image](https://github.com/manoelaestabile/embarcados_formiga/blob/main/Fluxo%20de%20comunica%C3%A7%C3%A3o%20-%20formiga.png)
 
+## 2.3. Protocolo SSH (Computador do usuário - Toradex)
+
+Para que haja comunicação entre o computador do laboratório e a Toradex, é necessário seguir alguns passos, como foi realizado em aula. Primeiro, é feito a conexão remota pelo _Anydesk_. Com o _SDK (Software Development Kit)_ instalado, executamos uma série de instruções no diretório home para exportar as variáveis e então realizar o _Cross Compiling_. Para enviar ao _target_, que nesse caso é a Toradex, identificamos o seu IP e aplicamos no outro terminal o protocolo _SSH (Security Shell)_, que permite conexões criptografadas entre cliente e servidor. Assim, é possível executar o código na toradex.
+
+O arquivo indicado por _Toradex.c_ , no repositório, refere-se ao código passado para a placa Colibri. Sua principal função é receber uma instrução vinda do usuário a respeito da direção de movimentação do robô e mandá-la para a porta CAN da placa.
+ 
+
+## 2.4. Protocolo CAN (Toradex - Mbed)
 
 
-Para que haja comunicação entre o computador do laboratório e a toradex, é necessário seguir alguns passos, como foi realizado em aula. Primeiro, é feito a conexão remota pelo _Anydesk_. Com o _SDK (Software Development Kit)_ instalado, executamos uma série de instruções no diretório home para exportar as variáveis e então realizar o _Cross Compiling_. Para enviar ao _target_, que nesse caso é a Toradex, identificamos o seu IP e aplicamos no outro terminal o protocolo _SSH (Security Shell)_, que permite conexões criptografadas entre cliente e servidor.Assim, é possível executar o código na toradex.
 
 
-
+## 3. Conclusão
+Apesar dos contratempos provocados pelo distanciamento durante o desenvolvimento do projeto, foram feitos avanços nos protocolos de caminhada da formiga robótica, bem como propostas para momentos propícios de testes com diferentes configurações de software. Além disso, a execução do projeto permitiu que o grupo adquirisse conhecimentos valiosos na programação, utilização de microprocessadores e comunicação entre sistemas embarcados.
 
