@@ -21,8 +21,9 @@ A formiga robótica possui 2 servos motores (um para rotação e outro para elev
 
 Para desenvolver o código, foi necessário definir os servos de elevação e rotação de cada perna e descrever cada conjunto de ações para cada comando de movimento. Basicamente, para o comando de mover para frente, o primeiro passo é mover simulataneamente as pernas 1,3 e 5, que consiste em: elevar a perna; rotacionar; descer e continuar rotacionando até voltar ao solo; recuar para posição inicial e zerar todos os contadores. Em seguida, para continuar o comando, pode realizar a sequência das pernas 2,4 e 6 e assim sucessivamente. Já para girar para a esquerda, a sequência de movimentos para as duas primeiras pernas são iguais, porém a última perna realiza a sequência de mover para a esquerda, que consiste em: elevar a perna; rotacionar; continuar rotacionando e descer e rotacionar até a posição inicial. 
 
-## 2.2. Componentes e comunicação 
+## 2.2. Componentes de controle e comunicação 
 
+O controle da formiga robótica foi feito por 
 
 
 IMAGEM ESQUEMATICA DA COMUNICAÇÃO
